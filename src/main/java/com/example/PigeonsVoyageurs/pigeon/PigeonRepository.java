@@ -1,8 +1,12 @@
 package com.example.PigeonsVoyageurs.pigeon;
 
+import com.example.PigeonsVoyageurs.entities.Pigeon;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.UUID;
+
 @Repository
-public interface PigeonRepository extends MongoRepository<Pigeon,String> {
+public interface PigeonRepository extends JpaRepository<Pigeon, String> {
 }

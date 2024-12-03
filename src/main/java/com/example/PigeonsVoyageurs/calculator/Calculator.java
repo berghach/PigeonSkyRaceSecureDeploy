@@ -1,26 +1,22 @@
 package com.example.PigeonsVoyageurs.calculator;
 
-import com.example.PigeonsVoyageurs.coordinate.Coordinate;
-import lombok.Data;
-
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.OptionalDouble;
 
 public class Calculator {
     private static final double EARTH_RADIUS = 6378.1370;
 
-    public static double calculateDistance(Coordinate start, Coordinate end) {
-        double dLat = Math.toRadians(start.getLatitude() - end.getLatitude());
-        double dLong = Math.toRadians(start.getLongitude() - end.getLongitude());
+    public static double calculateDistance(double startLat, double startLong, double endLat, double endLong) {
+        double dLat = Math.toRadians(startLat - endLat);
+        double dLong = Math.toRadians(startLong - endLong);
 
-        double startLat = Math.toRadians(start.getLatitude());
-        double endLat = Math.toRadians(end.getLatitude());
+        double startLatRad = Math.toRadians(startLat);
+        double endLatRad = Math.toRadians(endLat);
 
-        double a = haversine(dLat) + Math.cos(startLat) * Math.cos(endLat) * haversine(dLong);
+        double a = haversine(dLat) + Math.cos(startLatRad) * Math.cos(endLatRad) * haversine(dLong);
 
         return 2 * EARTH_RADIUS * Math.asin(Math.sqrt(a));
 

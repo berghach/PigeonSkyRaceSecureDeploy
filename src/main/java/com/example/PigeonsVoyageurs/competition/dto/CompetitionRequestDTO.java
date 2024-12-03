@@ -1,7 +1,6 @@
 package com.example.PigeonsVoyageurs.competition.dto;
 
-import com.example.PigeonsVoyageurs.coordinate.Coordinate;
-import com.example.PigeonsVoyageurs.ranking.Ranking;
+import com.example.PigeonsVoyageurs.entities.Ranking;
 
 import java.time.LocalDateTime;
 import java.util.List;
