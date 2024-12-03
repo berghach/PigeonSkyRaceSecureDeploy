@@ -1,5 +1,9 @@
 spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/PigeonsVoyageurs
-      database: PigeonsVoyageurs
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pigeon_sky_race
+    username: postgres
+    password: post2001
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
