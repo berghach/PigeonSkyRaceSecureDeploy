@@ -1,7 +1,7 @@
 package com.example.PigeonsVoyageurs.pigeon.dto;
 
 import com.example.PigeonsVoyageurs.enumeration.Sexe;
-import com.example.PigeonsVoyageurs.ranking.Ranking;
+import com.example.PigeonsVoyageurs.entities.Ranking;
 
 import java.util.List;
 

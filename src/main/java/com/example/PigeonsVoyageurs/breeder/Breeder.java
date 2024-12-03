@@ -1,7 +1,6 @@
 package com.example.PigeonsVoyageurs.breeder;
 
-import com.example.PigeonsVoyageurs.coordinate.Coordinate;
-import com.example.PigeonsVoyageurs.pigeon.Pigeon;
+import com.example.PigeonsVoyageurs.entities.Pigeon;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;

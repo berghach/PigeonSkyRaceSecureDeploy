@@ -1,6 +1,6 @@
 package com.example.PigeonsVoyageurs.competition.service;
 
-import com.example.PigeonsVoyageurs.competition.Competition;
+import com.example.PigeonsVoyageurs.entities.Competition;
 import com.example.PigeonsVoyageurs.competition.CompetitionMapper;
 import com.example.PigeonsVoyageurs.competition.CompetitionRepository;
 import com.example.PigeonsVoyageurs.competition.dto.CompetitionRequestDTO;

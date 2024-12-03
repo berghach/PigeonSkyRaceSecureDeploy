@@ -1,5 +1,5 @@
 package com.example.PigeonsVoyageurs.enumeration;
 
-public enum Sexe {
+public enum Sex {
     MALE, FEMALE
 }

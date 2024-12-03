@@ -1,7 +1,5 @@
-package com.example.PigeonsVoyageurs.ranking;
+package com.example.PigeonsVoyageurs.entities;
 
-import com.example.PigeonsVoyageurs.competition.Competition;
-import com.example.PigeonsVoyageurs.pigeon.Pigeon;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;

@@ -1,13 +1,11 @@
 package com.example.PigeonsVoyageurs.pigeon.service;
 
 
-import com.example.PigeonsVoyageurs.pigeon.Pigeon;
+import com.example.PigeonsVoyageurs.entities.Pigeon;
 import com.example.PigeonsVoyageurs.pigeon.PigeonMapper;
 import com.example.PigeonsVoyageurs.pigeon.PigeonRepository;
 import com.example.PigeonsVoyageurs.pigeon.dto.PigeonRequestDTO;
 import com.example.PigeonsVoyageurs.pigeon.dto.PigeonResponseDTO;
-import com.example.PigeonsVoyageurs.ranking.RankingRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,8 +1,11 @@
 package com.example.PigeonsVoyageurs.competition;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import com.example.PigeonsVoyageurs.entities.Competition;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.UUID;
+
 @Repository
-public interface CompetitionRepository extends MongoRepository<Competition, String> {
+public interface CompetitionRepository extends JpaRepository<Competition, UUID> {
 }

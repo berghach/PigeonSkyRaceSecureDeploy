@@ -1,5 +1,6 @@
 package com.example.PigeonsVoyageurs.pigeon;
 
+import com.example.PigeonsVoyageurs.entities.Pigeon;
 import com.example.PigeonsVoyageurs.pigeon.dto.PigeonRequestDTO;
 import com.example.PigeonsVoyageurs.pigeon.dto.PigeonResponseDTO;
 import org.mapstruct.Mapper;

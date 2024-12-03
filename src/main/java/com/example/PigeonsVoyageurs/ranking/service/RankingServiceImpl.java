@@ -1,6 +1,6 @@
 package com.example.PigeonsVoyageurs.ranking.service;
 
-import com.example.PigeonsVoyageurs.ranking.Ranking;
+import com.example.PigeonsVoyageurs.entities.Ranking;
 import com.example.PigeonsVoyageurs.ranking.RankingMapper;
 import com.example.PigeonsVoyageurs.ranking.RankingRepository;
 import com.example.PigeonsVoyageurs.ranking.dto.RankingRequestDTO;
