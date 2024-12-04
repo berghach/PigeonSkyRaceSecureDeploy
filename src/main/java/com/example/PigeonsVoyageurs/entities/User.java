@@ -32,7 +32,9 @@ public class User {
     private String password;
 
     @Column(name = "user_role", nullable = false)
-    private String role;
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private Role role = Role.ROLE_USER;
 
     @Column(name = "loft_name", nullable = true)
     private String loftName;
@@ -49,10 +51,4 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Competition> competitions;
 
-    @PrePersist
-    private void setDefaultRole() {
-        if (role == null || role.isEmpty()) {
-            this.role = String.valueOf(Role.ROLE_USER);
-        }
-    }
 }
