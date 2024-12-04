@@ -1,14 +1,16 @@
-package com.example.PigeonsVoyageurs.competition;
+package com.example.PigeonsVoyageurs.mappers;
 
 import com.example.PigeonsVoyageurs.dtos.request.CompetitionRequestDTO;
 import com.example.PigeonsVoyageurs.dtos.response.CompetitionResponseDTO;
 import com.example.PigeonsVoyageurs.entities.Competition;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring",
+        unmappedTargetPolicy = ReportingPolicy.IGNORE
+)
 public interface CompetitionMapper {
+
+    Competition toEntity(CompetitionRequestDTO competitionRequestDTO);
     CompetitionResponseDTO toResponseDTO(Competition competition);
-    @Mapping(target = "season.id", source = "seasonId")
-    Competition toEntity(CompetitionRequestDTO competitionDTO);
 }
