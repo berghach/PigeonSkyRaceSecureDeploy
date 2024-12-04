@@ -1,8 +1,8 @@
 //package com.example.PigeonsVoyageurs.ranking;
 //
 //import com.example.PigeonsVoyageurs.entities.Ranking;
-//import com.example.PigeonsVoyageurs.ranking.dto.RankingRequestDTO;
-//import com.example.PigeonsVoyageurs.ranking.dto.RankingResponseDTO;
+//import com.example.PigeonsVoyageurs.dtos.request.RankingRequestDTO;
+//import com.example.PigeonsVoyageurs.dtos.response.RankingResponseDTO;
 //import org.mapstruct.Mapper;
 //import org.mapstruct.Mapping;
 //

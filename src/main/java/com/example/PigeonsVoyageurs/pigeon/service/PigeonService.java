@@ -1,7 +1,7 @@
 package com.example.PigeonsVoyageurs.pigeon.service;
 
-import com.example.PigeonsVoyageurs.pigeon.dto.PigeonRequestDTO;
-import com.example.PigeonsVoyageurs.pigeon.dto.PigeonResponseDTO;
+import com.example.PigeonsVoyageurs.dtos.request.PigeonRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.PigeonResponseDTO;
 
 import java.util.List;
 

@@ -2,9 +2,9 @@ package com.example.PigeonsVoyageurs.ranking.service;
 
 import com.example.PigeonsVoyageurs.entities.Ranking;
 import com.example.PigeonsVoyageurs.ranking.RankingMapper;
-import com.example.PigeonsVoyageurs.ranking.RankingRepository;
-import com.example.PigeonsVoyageurs.ranking.dto.RankingRequestDTO;
-import com.example.PigeonsVoyageurs.ranking.dto.RankingResponseDTO;
+import com.example.PigeonsVoyageurs.repositories.RankingRepository;
+import com.example.PigeonsVoyageurs.dtos.request.RankingRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.RankingResponseDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

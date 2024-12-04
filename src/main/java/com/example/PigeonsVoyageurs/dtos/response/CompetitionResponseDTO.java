@@ -1,4 +1,4 @@
-package com.example.PigeonsVoyageurs.competition.dto;
+package com.example.PigeonsVoyageurs.dtos.response;
 
 import com.example.PigeonsVoyageurs.entities.Ranking;
 import com.example.PigeonsVoyageurs.season.Season;

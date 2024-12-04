@@ -1,7 +1,7 @@
 package com.example.PigeonsVoyageurs.breeder;
 
-import com.example.PigeonsVoyageurs.breeder.dto.BreederRequestDTO;
-import com.example.PigeonsVoyageurs.breeder.dto.BreederResponseDTO;
+import com.example.PigeonsVoyageurs.dtos.request.UserRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.UserResponseDTO;
 import com.example.PigeonsVoyageurs.breeder.service.BreederService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +22,8 @@ public class BreederController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<BreederResponseDTO> register(@RequestBody BreederRequestDTO breederDTO) {
-        BreederResponseDTO breeder = breederService.register(breederDTO);
+    public ResponseEntity<UserResponseDTO> register(@RequestBody UserRequestDTO breederDTO) {
+        UserResponseDTO breeder = breederService.register(breederDTO);
         return ResponseEntity.ok(breeder);
     }
 
@@ -35,28 +35,28 @@ public class BreederController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BreederResponseDTO> findById(@PathVariable String id) {
-        Optional<BreederResponseDTO> breederOpt = breederService.findById(id);
+    public ResponseEntity<UserResponseDTO> findById(@PathVariable String id) {
+        Optional<UserResponseDTO> breederOpt = breederService.findById(id);
         return breederOpt.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping("/email/{email}")
-    public ResponseEntity<BreederResponseDTO> findByEmail(@PathVariable String email) {
-        Optional<BreederResponseDTO> breederOpt = breederService.findByEmail(email);
+    public ResponseEntity<UserResponseDTO> findByEmail(@PathVariable String email) {
+        Optional<UserResponseDTO> breederOpt = breederService.findByEmail(email);
         return breederOpt.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping
-    public ResponseEntity<List<BreederResponseDTO>> findAll() {
-        List<BreederResponseDTO> breeders = breederService.findAll();
+    public ResponseEntity<List<UserResponseDTO>> findAll() {
+        List<UserResponseDTO> breeders = breederService.findAll();
         return ResponseEntity.ok(breeders);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<BreederResponseDTO> update(@PathVariable String id, @RequestBody BreederRequestDTO breederDTO) {
-        BreederResponseDTO updatedBreeder = breederService.update(id, breederDTO);
+    public ResponseEntity<UserResponseDTO> update(@PathVariable String id, @RequestBody UserRequestDTO breederDTO) {
+        UserResponseDTO updatedBreeder = breederService.update(id, breederDTO);
         return ResponseEntity.ok(updatedBreeder);
     }
 

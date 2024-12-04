@@ -1,7 +1,7 @@
 package com.example.PigeonsVoyageurs.competition;
 
-import com.example.PigeonsVoyageurs.competition.dto.CompetitionRequestDTO;
-import com.example.PigeonsVoyageurs.competition.dto.CompetitionResponseDTO;
+import com.example.PigeonsVoyageurs.dtos.request.CompetitionRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.CompetitionResponseDTO;
 import com.example.PigeonsVoyageurs.competition.service.CompetitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

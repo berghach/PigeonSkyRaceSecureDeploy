@@ -1,7 +1,7 @@
 package com.example.PigeonsVoyageurs.ranking;
 
-import com.example.PigeonsVoyageurs.ranking.dto.RankingRequestDTO;
-import com.example.PigeonsVoyageurs.ranking.dto.RankingResponseDTO;
+import com.example.PigeonsVoyageurs.dtos.request.RankingRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.RankingResponseDTO;
 import com.example.PigeonsVoyageurs.ranking.service.RankingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

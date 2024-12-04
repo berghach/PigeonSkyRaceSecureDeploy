@@ -31,11 +31,11 @@ public class Competition {
     @Column(name = "distance")
     private double distance;
 
-    @Column(name = "loft_latitude", nullable = true)
-    private double loftLatitude;
+    @Column(name = "start_latitude", nullable = true)
+    private double startLatitude;
 
-    @Column(name = "loft_longitude", nullable = true)
-    private double loftLongitude;
+    @Column(name = "start_longitude", nullable = true)
+    private double startLongitude;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false, foreignKey = @ForeignKey(name = "fk_competition_user"))

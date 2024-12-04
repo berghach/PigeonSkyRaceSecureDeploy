@@ -1,4 +1,4 @@
-package com.example.PigeonsVoyageurs.pigeon.dto;
+package com.example.PigeonsVoyageurs.dtos.response;
 
 import com.example.PigeonsVoyageurs.enumeration.Sexe;
 import com.example.PigeonsVoyageurs.entities.Ranking;

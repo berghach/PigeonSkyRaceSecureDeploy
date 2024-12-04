@@ -1,4 +1,4 @@
-package com.example.PigeonsVoyageurs.ranking.dto;
+package com.example.PigeonsVoyageurs.dtos.response;
 
 public record RankingResponseDTO(
         String id,
