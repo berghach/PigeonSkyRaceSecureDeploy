@@ -10,7 +10,7 @@
 //public interface RankingMapper {
 //
 //    @Mapping(target = "competition.id", source = "competitionId")
-//    @Mapping(target = "pigeon.pigeonRing", source = "pigeonId")
+//    @Mapping(target = "pigeon.pigeonRing", source = "pigeonRing")
 //    Ranking toEntity(RankingRequestDTO dto);
 //
 //    @Mapping(target = "competitionName", source = "competition.raceName")
