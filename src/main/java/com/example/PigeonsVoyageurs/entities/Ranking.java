@@ -2,8 +2,10 @@ package com.example.PigeonsVoyageurs.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.Id;
 
 import java.time.LocalTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "ranking",
@@ -20,8 +22,8 @@ import java.time.LocalTime;
 @ToString
 public class Ranking {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @ManyToOne
     @JoinColumn(name = "competition_id")
