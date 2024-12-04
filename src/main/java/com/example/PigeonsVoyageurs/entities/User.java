@@ -3,11 +3,8 @@ package com.example.PigeonsVoyageurs.entities;
 import com.example.PigeonsVoyageurs.enumeration.Role;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.validation.constraints.Email;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -48,6 +45,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Pigeon> pigeons;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Competition> competitions;
 
     @PrePersist
     private void setDefaultRole() {
