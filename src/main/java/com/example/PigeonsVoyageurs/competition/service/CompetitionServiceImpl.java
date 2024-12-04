@@ -2,9 +2,9 @@ package com.example.PigeonsVoyageurs.competition.service;
 
 import com.example.PigeonsVoyageurs.entities.Competition;
 import com.example.PigeonsVoyageurs.competition.CompetitionMapper;
-import com.example.PigeonsVoyageurs.competition.CompetitionRepository;
-import com.example.PigeonsVoyageurs.competition.dto.CompetitionRequestDTO;
-import com.example.PigeonsVoyageurs.competition.dto.CompetitionResponseDTO;
+import com.example.PigeonsVoyageurs.repositories.CompetitionRepository;
+import com.example.PigeonsVoyageurs.dtos.request.CompetitionRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.CompetitionResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

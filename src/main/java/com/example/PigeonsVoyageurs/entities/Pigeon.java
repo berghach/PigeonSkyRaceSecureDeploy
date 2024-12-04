@@ -6,6 +6,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 
 import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Table(name = "pigeon")
@@ -18,7 +19,7 @@ import java.util.Set;
 public class Pigeon {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @Column(name = "sexe")
     @Enumerated(EnumType.STRING)

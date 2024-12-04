@@ -1,7 +1,7 @@
 //package com.example.PigeonsVoyageurs.breeder;
 //
-//import com.example.PigeonsVoyageurs.breeder.dto.BreederRequestDTO;
-//import com.example.PigeonsVoyageurs.breeder.dto.BreederResponseDTO;
+//import com.example.PigeonsVoyageurs.dtos.request.UserRequestDTO;
+//import com.example.PigeonsVoyageurs.dtos.response.UserResponseDTO;
 //import org.mapstruct.Mapper;
 //import org.mapstruct.factory.Mappers;
 //
@@ -9,9 +9,9 @@
 //public interface BreederMapper {
 //    BreederMapper INSTANCE = Mappers.getMapper(BreederMapper.class);
 //
-//    BreederRequestDTO toRequestDTO(Breeder breeder);
+//    UserRequestDTO toRequestDTO(Breeder breeder);
 //
-//    BreederResponseDTO toResponseDTO(Breeder breeder);
+//    UserResponseDTO toResponseDTO(Breeder breeder);
 //
-//    Breeder toEntity(BreederRequestDTO breederDTO);
+//    Breeder toEntity(UserRequestDTO breederDTO);
 //}

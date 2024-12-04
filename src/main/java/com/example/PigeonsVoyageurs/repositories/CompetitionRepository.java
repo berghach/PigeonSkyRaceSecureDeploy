@@ -1,4 +1,4 @@
-package com.example.PigeonsVoyageurs.competition;
+package com.example.PigeonsVoyageurs.repositories;
 
 import com.example.PigeonsVoyageurs.entities.Competition;
 import org.springframework.data.jpa.repository.JpaRepository;

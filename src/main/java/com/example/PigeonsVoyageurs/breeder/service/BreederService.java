@@ -1,23 +1,23 @@
 package com.example.PigeonsVoyageurs.breeder.service;
 
-import com.example.PigeonsVoyageurs.breeder.dto.BreederRequestDTO;
-import com.example.PigeonsVoyageurs.breeder.dto.BreederResponseDTO;
+import com.example.PigeonsVoyageurs.dtos.request.UserRequestDTO;
+import com.example.PigeonsVoyageurs.dtos.response.UserResponseDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface BreederService {
-    BreederResponseDTO register(BreederRequestDTO breederDTO);
+    UserResponseDTO register(UserRequestDTO breederDTO);
 
     Optional<String> login(String userName, String password);
 
-    Optional<BreederResponseDTO> findById(String id);
+    Optional<UserResponseDTO> findById(String id);
 
-    Optional<BreederResponseDTO> findByEmail(String email);
+    Optional<UserResponseDTO> findByEmail(String email);
 
-    List<BreederResponseDTO> findAll();
+    List<UserResponseDTO> findAll();
 
-    BreederResponseDTO update(String id, BreederRequestDTO breederDTO);
+    UserResponseDTO update(String id, UserRequestDTO breederDTO);
 
     void delete(String id);
 }
