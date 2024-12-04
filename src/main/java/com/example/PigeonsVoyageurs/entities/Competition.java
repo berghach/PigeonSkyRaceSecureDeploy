@@ -2,8 +2,6 @@ package com.example.PigeonsVoyageurs.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
@@ -20,6 +18,7 @@ import java.util.UUID;
 public class Competition {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name ="id")
     private UUID id;
 
     @Column(name = "race_name")

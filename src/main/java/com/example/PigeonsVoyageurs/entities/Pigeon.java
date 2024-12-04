@@ -3,7 +3,6 @@ package com.example.PigeonsVoyageurs.entities;
 import com.example.PigeonsVoyageurs.enumeration.Sexe;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
 import java.util.Set;
 import java.util.UUID;
@@ -19,6 +18,7 @@ import java.util.UUID;
 public class Pigeon {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name ="id")
     private UUID id;
 
     @Column(name = "pigeon_ring")

@@ -2,7 +2,6 @@ package com.example.PigeonsVoyageurs.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalTime;
 import java.util.UUID;
@@ -23,6 +22,7 @@ import java.util.UUID;
 public class Ranking {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name ="id")
     private UUID id;
 
     @ManyToOne
