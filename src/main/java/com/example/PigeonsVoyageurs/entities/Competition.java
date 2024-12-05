@@ -40,6 +40,6 @@ public class Competition {
     @JoinColumn(name = "user_id", nullable = false, foreignKey = @ForeignKey(name = "fk_competition_user"))
     private User user;
 
-    @OneToMany(mappedBy = "pigeon", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "competition", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Ranking> rankings;
 }

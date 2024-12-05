@@ -9,13 +9,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user")
+@Table(name = "\"user\"")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
-@ToString
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -46,10 +45,6 @@ public class User {
     @Column(name = "loft_longitude", nullable = true)
     private double loftLongitude;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Pigeon> pigeons;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Competition> competitions;
 
 }
