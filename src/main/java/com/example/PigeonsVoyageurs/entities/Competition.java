@@ -11,8 +11,7 @@ import java.util.UUID;
 @Table(name = "competition")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
 @ToString
 public class Competition {

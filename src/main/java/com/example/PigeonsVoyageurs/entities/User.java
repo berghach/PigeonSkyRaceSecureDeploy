@@ -3,8 +3,12 @@ package com.example.PigeonsVoyageurs.entities;
 import com.example.PigeonsVoyageurs.enumeration.Role;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.Email;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,23 +16,20 @@ import java.util.UUID;
 @Table(name = "\"user\"")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
-public class User {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name ="id")
     private UUID id;
 
     @Column(name = "user_name", nullable = false, unique = true)
+    @Getter(AccessLevel.NONE)
     private String username;
 
-    @Email
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
-
     @Column(name = "password", nullable = false)
+    @Getter(AccessLevel.NONE)
     private String password;
 
     @Column(name = "user_role", nullable = false)
@@ -46,5 +47,38 @@ public class User {
     private double loftLongitude;
 
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(role.name()));
+    }
 
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return UserDetails.super.isAccountNonExpired();
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return UserDetails.super.isAccountNonLocked();
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return UserDetails.super.isCredentialsNonExpired();
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return UserDetails.super.isEnabled();
+    }
 }

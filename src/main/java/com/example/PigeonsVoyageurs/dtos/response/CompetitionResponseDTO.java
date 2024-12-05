@@ -29,5 +29,4 @@ public class CompetitionResponseDTO{
 
     private double startLongitude;
 
-    private String organizer;
 }

@@ -2,27 +2,46 @@ package com.example.PigeonsVoyageurs.services;
 
 import com.example.PigeonsVoyageurs.dtos.request.UserRequestDTO;
 import com.example.PigeonsVoyageurs.dtos.response.UserResponseDTO;
+import com.example.PigeonsVoyageurs.entities.User;
+import com.example.PigeonsVoyageurs.mappers.UserMapper;
+import com.example.PigeonsVoyageurs.repositories.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private UserMapper userMapper;
     
     public Optional<UserResponseDTO> get(UUID id) {
-        return Optional.empty();
+        User user = userRepository.getReferenceById(id);
+        UserResponseDTO userResponseDTO = userMapper.toResponseDTO(user);
+        return Optional.of(userResponseDTO);
     }
 
     
     public List<UserResponseDTO> getAll() {
-        return List.of();
+        List<User> users = userRepository.findAll();
+        return users.stream().map(userMapper::toResponseDTO).toList();
     }
 
     
     public UserResponseDTO save(UserRequestDTO reqEntity) {
-        return null;
+        System.out.println("Mapping.....");
+        User mappedUser = userMapper.toEntity(reqEntity);
+        System.out.println(mappedUser);
+        System.out.println("Inserting...");
+        User savedUser = userRepository.save(mappedUser);
+        System.out.println(savedUser);
+        return userMapper.toResponseDTO(savedUser);
     }
 
     
@@ -32,6 +51,9 @@ public class UserService {
 
     
     public boolean delete(UUID oldId) {
-        return false;
+        User existingUser = userRepository.findById(oldId)
+                .orElseThrow(() -> new EntityNotFoundException("User with ID " + oldId + " not found"));
+        userRepository.delete(existingUser);
+        return userRepository.existsById(oldId);
     }
 }
