@@ -11,10 +11,6 @@ public record UserRequestDTO(
         @NotNull(message = "Username is required")
         String userName,
 
-        @Email
-        @NotNull(message = "Email is required")
-        String email,
-
         @NotNull(message = "Password is required")
         String password,
 

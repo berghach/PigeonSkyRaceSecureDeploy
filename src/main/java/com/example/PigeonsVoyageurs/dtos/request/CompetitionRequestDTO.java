@@ -22,7 +22,5 @@ public record CompetitionRequestDTO(
         double startLatitude,
 
         @NotNull(message = "Start point longitude is required")
-        double startLongitude,
-
-        UUID id
+        double startLongitude
 ) {}

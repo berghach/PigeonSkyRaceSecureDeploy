@@ -15,7 +15,5 @@ public record PigeonRequestDTO(
         String color,
 
         @NotNull(message = "The pigeon age is required")
-        int age,
-
-        UUID userId
+        int age
 ) {}
