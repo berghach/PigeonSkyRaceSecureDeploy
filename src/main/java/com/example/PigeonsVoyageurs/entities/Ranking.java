@@ -15,7 +15,6 @@ import java.util.UUID;
 )
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
 @ToString
 public class Ranking {
@@ -46,4 +45,68 @@ public class Ranking {
 
     @Column(name = "score")
     private double score;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public Competition getCompetition() {
+        return competition;
+    }
+
+    public void setCompetition(Competition competition) {
+        this.competition = competition;
+    }
+
+    public Pigeon getPigeon() {
+        return pigeon;
+    }
+
+    public void setPigeon(Pigeon pigeon) {
+        this.pigeon = pigeon;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public LocalTime getDuration() {
+        return duration;
+    }
+
+    public void setDuration(LocalTime duration) {
+        this.duration = duration;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
 }

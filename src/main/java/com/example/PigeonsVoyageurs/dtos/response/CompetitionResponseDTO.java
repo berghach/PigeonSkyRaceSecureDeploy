@@ -29,4 +29,27 @@ public class CompetitionResponseDTO{
 
     private double startLongitude;
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setRaceName(String raceName) {
+        this.raceName = raceName;
+    }
+
+    public void setStartAt(LocalDateTime startAt) {
+        this.startAt = startAt;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public void setStartLatitude(double startLatitude) {
+        this.startLatitude = startLatitude;
+    }
+
+    public void setStartLongitude(double startLongitude) {
+        this.startLongitude = startLongitude;
+    }
 }

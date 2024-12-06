@@ -26,4 +26,24 @@ public class PigeonResponseDTO {
     private int age;
 
     private String owner;
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setSexe(Sexe sexe) {
+        this.sexe = sexe;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 }

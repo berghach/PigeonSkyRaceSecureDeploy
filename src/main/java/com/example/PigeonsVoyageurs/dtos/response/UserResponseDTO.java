@@ -17,8 +17,6 @@ public class UserResponseDTO {
 
     private String username;
 
-    private String email;
-
     private Role role;
 
     private String loftName;
@@ -27,4 +25,27 @@ public class UserResponseDTO {
 
     private double loftLongitude;
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public void setLoftName(String loftName) {
+        this.loftName = loftName;
+    }
+
+    public void setLoftLatitude(double loftLatitude) {
+        this.loftLatitude = loftLatitude;
+    }
+
+    public void setLoftLongitude(double loftLongitude) {
+        this.loftLongitude = loftLongitude;
+    }
 }

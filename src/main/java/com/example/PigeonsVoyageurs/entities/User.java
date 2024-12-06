@@ -7,7 +7,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.validation.constraints.Email;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +15,6 @@ import java.util.UUID;
 @Table(name = "\"user\"")
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
 public class User implements UserDetails {
     @Id
@@ -25,11 +23,9 @@ public class User implements UserDetails {
     private UUID id;
 
     @Column(name = "user_name", nullable = false, unique = true)
-    @Getter(AccessLevel.NONE)
     private String username;
 
     @Column(name = "password", nullable = false)
-    @Getter(AccessLevel.NONE)
     private String password;
 
     @Column(name = "user_role", nullable = false)
@@ -46,6 +42,53 @@ public class User implements UserDetails {
     @Column(name = "loft_longitude", nullable = true)
     private double loftLongitude;
 
+    public UUID getId() {
+        return id;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public String getLoftName() {
+        return loftName;
+    }
+
+    public double getLoftLatitude() {
+        return loftLatitude;
+    }
+
+    public double getLoftLongitude() {
+        return loftLongitude;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public void setLoftName(String loftName) {
+        this.loftName = loftName;
+    }
+
+    public void setLoftLatitude(double loftLatitude) {
+        this.loftLatitude = loftLatitude;
+    }
+
+    public void setLoftLongitude(double loftLongitude) {
+        this.loftLongitude = loftLongitude;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
