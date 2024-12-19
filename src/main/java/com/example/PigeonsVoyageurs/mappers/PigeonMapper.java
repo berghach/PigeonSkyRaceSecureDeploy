@@ -14,7 +14,6 @@ public interface PigeonMapper {
 //    @Mapping(source = "sexe", target = "sexe")
 //    @Mapping(source = "color", target = "color")
 //    @Mapping(source = "age", target = "age")
-//    @Mapping(source = "user", target = "user")
 //    @Mapping(target = "id", ignore = true)
     Pigeon toEntity(PigeonRequestDTO pigeonRequestDTO);
 //    @Mapping(source = "id", target = "id")
@@ -22,6 +21,6 @@ public interface PigeonMapper {
 //    @Mapping(source = "sexe", target = "sexe")
 //    @Mapping(source = "color", target = "color")
 //    @Mapping(source = "age", target = "age")
-//    @Mapping(source = "user", target = "user")
+//    @Mapping(source = "user.username", target = "owner")
     PigeonResponseDTO toResponseDTO(Pigeon pigeon);
 }
